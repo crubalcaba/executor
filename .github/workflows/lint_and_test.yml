@@ -29,13 +29,18 @@ jobs:
         KEMAL_ENV: test
       run: crystal spec
 
-    - name: Create test  dummy
-      run: echo 'require "./spec/**"' > run_tests.cr && crystal build run_tests.cr -D skip-integration
+    - name: Create test dummy
+      run: |
+        echo 'require "./spec/**"' > run_tests.cr
+        crystal build run_tests.cr -D skip-integration
 
     - name: Coverage
       uses: sudo-bot/action-kcov@latest
       with:
-        cli-args: "--clean" "--include-path=$(pwd)/src" "$(pwd)/coverage" "./run_tests"
+        cli-args: "--clean --include-path=$(pwd)/src $(pwd)/coverage ./run_tests"
+
+    - name: Install curl
+      run: sudo apt-get install curl
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
