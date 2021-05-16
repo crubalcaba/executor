@@ -1,6 +1,6 @@
 # executor
 
-Kemal web server waiting for posts to execute a local command.
+Kemal web server waiting for posts to execute a local command. (extremely overengineered :)
 
 ## Installation
 
