@@ -35,7 +35,7 @@ jobs:
     - name: Coverage
       uses: sudo-bot/action-kcov@latest
       with:
-        cli-args: --clean --include-path=$(pwd)/src ./run_tests
+        cli-args: "--clean" "--include-path=$(pwd)/src" "$(pwd)/coverage" "./run_tests"
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
