@@ -4,19 +4,20 @@ Kemal web server waiting for posts to execute a local command.
 
 ## Installation
 
-TODO: Write installation instructions here
+Install [crystal](https://crystal-lang.org/install/).
 
 ## Usage
 
-TODO: Write usage instructions here
+`crystal run src/executor.cr` or build and run after the compiled version :)
 
 ## Development
 
-TODO: Write development instructions here
+`shards install` and you should be good to go :)
+(you might need to install `libyaml-dev` or its equivalent in your OS if it fails at building ameba)
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/executor/fork>)
+1. Fork it (<https://github.com/crubalcaba/executor/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -24,4 +25,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [Carlos Rubalcaba](https://github.com/crubalcaba) - creator and maintainer
