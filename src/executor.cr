@@ -1,7 +1,4 @@
 require "kemal"
-
-get "/" do
-  "Hello World!"
-end
+require "./ws/controllers"
 
 Kemal.run
