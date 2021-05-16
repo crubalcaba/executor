@@ -19,5 +19,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Install dependencies
       run: shards install
+    - name: Check format
+      run: crystal tool format --check
     - name: Run tests
       run: crystal spec
