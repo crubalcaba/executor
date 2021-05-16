@@ -1,3 +1,5 @@
+![Lint and test](https://github.com/crubalcaba/executor/actions/workflows/lint_and_test.yml/badge.svg)
+
 # executor
 
 Kemal web server waiting for posts to execute a local command. (extremely overengineered :)
