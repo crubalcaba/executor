@@ -1,0 +1,17 @@
+name: executor
+version: 0.1.0
+
+authors:
+  - Carlos Rubalcaba <stark9337@gmail.com>
+
+targets:
+  executor:
+    main: src/executor.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+crystal: 0.35.1
+
+license: MIT
