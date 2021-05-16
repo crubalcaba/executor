@@ -1,11 +1,7 @@
-module Executor
-  
-  require "kemal"
+require "kemal"
 
-  get "/" do
-    "Hello World!"
-  end
-
-  Kemal.run
-
+get "/" do
+  "Hello World!"
 end
+
+Kemal.run
