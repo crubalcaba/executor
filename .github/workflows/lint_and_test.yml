@@ -22,4 +22,6 @@ jobs:
     - name: Check format
       run: crystal tool format --check
     - name: Run tests
+      env:
+        - KEMAL_ENV: test
       run: crystal spec
