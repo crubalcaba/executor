@@ -37,10 +37,7 @@ jobs:
     - name: Coverage
       uses: sudo-bot/action-kcov@latest
       with:
-        cli-args: --version #"$(pwd)/coverage ./run_tests"
-
-    - name: Install curl
-      run: sudo apt-get install curl
+        cli-args: $(pwd)/coverage ./run_tests
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
