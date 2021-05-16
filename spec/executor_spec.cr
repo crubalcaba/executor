@@ -1,5 +1,11 @@
 require "./spec_helper"
+require "../src/executor"
 
-it "works" do
-  true.should eq(true)
+describe "Executor" do
+
+  it "returns 200 OK on HEAD / " do
+    head "/"
+    response.status_code.should eq 200
+  end
+
 end
