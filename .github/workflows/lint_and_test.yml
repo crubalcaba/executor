@@ -35,9 +35,9 @@ jobs:
         crystal build run_tests.cr -D skip-integration
 
     - name: Coverage
-      uses: sudo-bot/action-kcov@latest
+      uses: crubalcaba/action-kcov@latest
       with:
-        cli-args: $(pwd)/coverage ./run_tests
+        cli-args: --include-path=$(pwd)/src $(pwd)/coverage ./run_tests
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
