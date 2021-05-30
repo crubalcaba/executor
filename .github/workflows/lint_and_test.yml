@@ -35,7 +35,7 @@ jobs:
         crystal build run_tests.cr -D skip-integration
 
     - name: Coverage
-      uses: crubalcaba/action-kcov@latest
+      uses: crubalcaba/kcov-action@v1
       with:
         cli-args: --include-path=$(pwd)/src $(pwd)/coverage ./run_tests
 
