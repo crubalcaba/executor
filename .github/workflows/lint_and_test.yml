@@ -37,7 +37,10 @@ jobs:
     - name: Coverage
       uses: crubalcaba/kcov-action@v1
       with:
-        cli-args: --include-path=$(pwd)/src $(pwd)/coverage ./run_tests
+        cli-args: 
+          - --include-path=$(pwd)/src
+          - $(pwd)/coverage
+          - ./run_tests
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
